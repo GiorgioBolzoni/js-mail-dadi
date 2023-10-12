@@ -1,5 +1,6 @@
 body{
     color: white;
+    background-color: azure;
 }
 #wrapper{
     background-color: rgb(90, 90, 248);
@@ -20,7 +21,7 @@ body{
     width: max-content;
     background-color: rgb(201, 201, 41);
     color: black;
-    border-color: yellow;
+    border-color: black;
 }
 #result-container{
     color: white;

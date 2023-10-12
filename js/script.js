@@ -55,14 +55,14 @@ btnPlay.addEventListener('click', function(){
     results[resultsPlayer];
     console.log(results[resultsPlayer])
     if (resultsBot === resultsPlayer){
-        botScore.innerText = 'bot:  DRAW'
-        playerScore.innerText = 'player:  DRAW'
+        botScore.innerHTML = `${resultsBot} ---- bot:  DRAW`
+        playerScore.innerText = `${resultsPlayer} ---- player:  DRAW`
     } else if(resultsBot > resultsPlayer){
-        botScore.innerText = 'bot:  WIN'
-        playerScore.innerText = 'player:  LOST'
+        botScore.innerText = `${resultsBot} ---- bot:  WIN`
+        playerScore.innerText = `${resultsPlayer} ---- player:  LOST`
     } else if(resultsBot < resultsPlayer){
-        botScore.innerText = 'bot:  LOST'
-        playerScore.innerText = 'player:  WIN'
+        botScore.innerText = `${resultsBot} ---- bot:  LOST`
+        playerScore.innerText = `${resultsPlayer} ---- player:  WIN`
     }
 
 })
