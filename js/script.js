@@ -7,7 +7,7 @@ btnCheck.addEventListener('click', function(){
     console.log(emlCheck)
     // console.log(users)
     let checkMex = document.getElementById('check-mex')
-    
+    let presente = 'false'
     // const confirm = document.createElement('div')
     // if(users.includes(emlCheck)){
     //     checkMex.classList.remove('d-none');
@@ -23,16 +23,18 @@ btnCheck.addEventListener('click', function(){
     for (let i = 0; i < users.length; i++) {
         let userCorrente = users[i];
         if(userCorrente === emlCheck){
-            checkMex.classList.remove('d-none');
-            checkMex.innerHTML = 'Presente!';
-            // console.log(checkMex)
-        } else{
-            checkMex.classList.remove('d-none');
-            checkMex.innerHTML = 'La mail indicata non è registrata!';
-            // console.log(checkMex)
-        }
+            presente = true
+        } 
     
     }
+    let text, cla;
+    if(presente){
+        text = 'Presente!';
+    } else {
+        text = 'La mail indicata non è registrata!';
+    }
+    checkMex.innerText = text
+    checkMex.classList.remove('d-none');
 })
 
 //utility
