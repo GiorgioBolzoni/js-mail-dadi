@@ -1,4 +1,8 @@
 const btnCheck = document.getElementById('btn-check');
+const btnPlay = document.getElementById('btn-play');
+const botScore = document.getElementById('bot-result');
+const playerScore = document.getElementById('player-result');
+
 // creo evento al click del bottone
 btnCheck.addEventListener('click', function(){
     // inserisco una lista di mail
@@ -22,12 +26,12 @@ btnCheck.addEventListener('click', function(){
 //inserisco check
     for (let i = 0; i < users.length; i++) {
         let userCorrente = users[i];
-        if(userCorrente === emlCheck){
+        if(emlCheck.includes(users[i])){
             presente = true
         } 
     
     }
-    let text, cla;
+    let text;
     if(presente){
         text = 'Presente!';
     } else {
@@ -36,6 +40,33 @@ btnCheck.addEventListener('click', function(){
     checkMex.innerText = text
     checkMex.classList.remove('d-none');
 })
+
+
+//esercizio dadi
+
+btnPlay.addEventListener('click', function(){
+    // inserisco una lista di mail
+    const results = ['1', '2', '3', '4' , '5', '6'];
+    console.log(results)
+    const resultsBot = getRndInteger(0, results.length-1);
+    results[resultsBot];
+    console.log(results[resultsBot])
+    const resultsPlayer = getRndInteger(0, results.length-1);
+    results[resultsPlayer];
+    console.log(results[resultsPlayer])
+    if (resultsBot === resultsPlayer){
+        botScore.innerText = 'bot:  DRAW'
+        playerScore.innerText = 'player:  DRAW'
+    } else if(resultsBot > resultsPlayer){
+        botScore.innerText = 'bot:  WIN'
+        playerScore.innerText = 'player:  LOST'
+    } else if(resultsBot < resultsPlayer){
+        botScore.innerText = 'bot:  LOST'
+        playerScore.innerText = 'player:  WIN'
+    }
+
+})
+
 
 //utility
 function getRndInteger(min, max) {

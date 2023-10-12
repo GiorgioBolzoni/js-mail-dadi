@@ -16,3 +16,14 @@ body{
     border: 3px dashed red;
     color: red;
 }
+#btn-play{
+    width: max-content;
+    background-color: rgb(201, 201, 41);
+    color: black;
+    border-color: yellow;
+}
+#result-container{
+    color: white;
+    width: 80%;
+    height: 100px;
+}
