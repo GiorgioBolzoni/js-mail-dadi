@@ -10,3 +10,9 @@ body{
     color: white;
     border-color: black;
 }
+#check-mex{
+    background-color:white;
+    font-size: 1.2em;
+    border: 3px dashed red;
+    color: red;
+}
