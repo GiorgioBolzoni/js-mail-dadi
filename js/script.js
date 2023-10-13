@@ -11,7 +11,7 @@ btnCheck.addEventListener('click', function(){
     console.log(emlCheck)
     // console.log(users)
     let checkMex = document.getElementById('check-mex')
-    let presente = 'false'
+    let presente = false
     // const confirm = document.createElement('div')
     // if(users.includes(emlCheck)){
     //     checkMex.classList.remove('d-none');
